@@ -22,8 +22,12 @@ search_icon.addEventListener("click", () => {
     fetch(baseUrl)
       .then((respone) => respone.json())
       .then((data) => {
-        console.log(data);
-        generateHtml(data.hits);
+        if (data.hits.length === 0) {
+          alert("sorry your search item is not available");
+          generateHtml(data.hits);
+        } else {
+          generateHtml(data.hits);
+        }
       });
   }
   fetchApi();
