@@ -4,6 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -186,6 +187,10 @@ section .container .search-result p {
   color: #000 !important;
 }
 
+.scrollingUp {
+  left: -30px !important;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     width: 85% !important;
@@ -193,5 +198,26 @@ section .container .search-result p {
   form {
     width: 100% !important;
   }
+}
+
+div#scrollUp {
+  position: fixed;
+  top: 50%;
+  left: -200px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 70px;
+  padding: 5px;
+  background: #fff;
+  text-align: right;
+}
+
+div#scrollUp a {
+  text-decoration: none;
+}
+
+ion-icon.md.hydrated {
+  font-size: 25px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Ubuntu", sans-serif;
@@ -148,6 +149,11 @@ section {
   }
 }
 
+.scrollingUp{
+  left: -30px !important;
+}
+
+
 @media screen and(max-width:992px) {
   .container {
     width: 85% !important;
@@ -155,4 +161,25 @@ section {
   form {
     width: 100% !important;
   }
+}
+
+
+div#scrollUp {
+  position: fixed;
+  top: 50%;
+  left: -200px;
+  transition: 0.3s;
+  width: 70px;
+  padding: 5px;
+  background: #fff;
+  text-align: right;
+  a{
+    text-decoration: none;
+    
+  }
+}
+
+ion-icon.md.hydrated {
+  font-size: 25px;
+  cursor: pointer;
 }

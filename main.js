@@ -91,3 +91,9 @@ window.addEventListener("scroll", () => {
   let windowScroll = scrollY > 100;
   navBar.classList.toggle("scrolling-nav", windowScroll);
 });
+
+window.addEventListener("scroll", () => {
+  let scrollUP = document.querySelector("#scrollUp");
+  let windowScroll = scrollY > 1000;
+  scrollUP.classList.toggle("scrollingUp", windowScroll);
+});
